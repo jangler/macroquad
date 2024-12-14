@@ -111,6 +111,13 @@ pub fn mouse_wheel() -> (f32, f32) {
     (context.mouse_wheel.x, context.mouse_wheel.y)
 }
 
+/// Reset the input state (keys and buttons pressed).
+pub fn reset_input_state() {
+    let context = get_context();
+    context.keys_down.clear();
+    context.mouse_down.clear();
+}
+
 /// Detect if the key has been pressed once
 pub fn is_key_pressed(key_code: KeyCode) -> bool {
     let context = get_context();
