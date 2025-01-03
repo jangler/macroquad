@@ -753,7 +753,6 @@ impl EventHandler for Stage {
 
                 unsafe {
                     miniquad::gl::glFlush();
-                    miniquad::gl::glFinish();
                 }
             }
         }
